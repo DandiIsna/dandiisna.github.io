@@ -1,1 +1,188 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Profile Card</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: 'poppins', sans-serif;
+      box-sizing: border-box;
+    }
+    .container {
+      width: 100%;
+      min-height: 100vh;
+      background: black;
+      padding: 10px;
+    }
+    .card {
+      width: 350px;
+      height: 515px;
+      margin: 100px auto 0;
+    }
+    .card-inner {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transition: transform 1s;
+      transform-style: preserve-3d;
+    }
+    .front, .back {
+      width: 100%;
+      height: 100%;
+      border-radius: 15px;
+      position: absolute;
+      backface-visibility: hidden;
+    }
+    .front {
+      background: url(http://localhost:7700/Image/376525C0-8CD9-4F45-8366-37060C2729F4.jpeg);
+      background-size: cover;
+      background-position: center;
+      padding: 60px 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      color: #fff;
+    }
+    .front h2 {
+	font-weight: 500;
+}
+.front p {
+	color: #ccc;
+	font-size: 13px;
+}
+.front button {
+	width: 120px;
+	border: 1px solid #fff;
+	background: transparent;
+	border-radius: 50px;
+	padding: 8px 20px;
+	cursor: pointer;
+	margin-top: 20px;
+	color: #fff;
+}
+.back {
+	background: #fff;
+	color: #333;
+	padding: 20px 40px;
+	transform: rotateY(180deg);
+}
+.back h1 {
+	font-size: 50px;
+	line-height: 55px;
+	margin-bottom: 10px;
+}
+.back h1 span {
+	font-weight: 400;
+}
+.back p {
+	font-size: 14px;
+}
+.back p span {
+	font-weight: 600; 
+}
+.back img {
+	width: 120px;
+}
+.row {
+	display: flex;
+	align-items: center;
+	margin-top: 30px;
+}
+.col {
+	flex: 1;
+	text-align: center;
+	color: #555;
+	font-size: 12px;
+	position: relative;
+}
+.col h2 {
+	font-size: 20px;
+}
+.col::after {
+	content: "";
+	width: 1.5px;
+	height: 20px;
+	background: #7800ad;
+	position: absolute;
+	top: 5px;
+	right: 0;
+}
+.col:last-child::after {
+	display: none;
+}
+.col p {
+	margin-top: 5px;
+}
+.back button {
+	background: #7800ad;
+	color: #fff;
+	border: 0;
+	outline: 0;
+	padding: 8px 25px;
+	border-radius: 30px;
+	font-size: 14px;
+	margin-right: 15px;
+	box-shadow: 0 8px 10px rgba(120, 0, 173, 0.3);
+}
+.back a {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	box-shadow: 0 5px 10px rgb(0, 0, 0, 0.2);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 5px;
+}
+.back a img {
+	width: 50%;
+}
+.card:hover .card-inner {
+	transform: rotateY(180deg);
+}
+    /* ... (lanjutkan dengan CSS Anda) ... */
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="card-inner">
+        <div class="front">
+          <h2>Pebi Sadega</h2>
+          <p>Pria Idaman</p>
+          <button>Hover Me</button>
+        </div>
+        <div class="back">
+          <img src="http://localhost:7700/Image/4DA059B9-C08F-4A72-8C9E-1EDBB8BEB575.png">
+          <h1>Pebi <span>Sadega</span></h1>
+          <p>Follow Instagram urang <span>@pebisadegaaaa</span> anu followers na 55k</p>
+          	<div class="row">
+						<div class="col">
+							<h2>1</h2>
+							<p>Post</p>
+						</div>
+						<div class="col">
+							<h2>55.1K</h2>
+							<p>Followers</p>
+						</div>
+						<div class="col">
+							<h2>856</h2>
+							<p>Following</p>
+						</div>
+					</div>
+					<div class="row">
+						<button>Follow</button>
+						<a href="https://instagram.com/pebisadegaaaa?igshid=MzRlODBiNWFlZA=="><img src="http://localhost:7700/Image/IMG_4761.png"></a>
+						<a href="https://www.facebook.com/pebi.sadega?mibextid=LQQJ4d"><img src="http://localhost:7700/Image/IMG_4762.png"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="main.js"></script>
+</body>
+</html>
